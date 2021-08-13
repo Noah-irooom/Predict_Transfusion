@@ -14,4 +14,7 @@
 Neural network predicts need for red blood cell transfusion for patients with acute gastrointestinal bleeding admitted to the intensive care unit
 - 링크 : https://www.nature.com/articles/s41598-021-88226-3
 
+## 4. 데이터 전처리
+
+## 5. 모델링 디자인
 
