@@ -7,4 +7,11 @@
 
 ## 2. MIMIC-III 데이터 소개
 - 참고링크 : https://github.com/MIT-LCP/mimic-code
-- 미국 
+- 미국 중환자실 데이터로서 Beth Israel Deaconess Medical Center 에 2001-2012동안 ICU입원한 환자를 대상으로함. 
+- 약 4만명 환자 수 기록.
+
+## 3. 벤치마킹 논문
+Neural network predicts need for red blood cell transfusion for patients with acute gastrointestinal bleeding admitted to the intensive care unit
+- 링크 : https://www.nature.com/articles/s41598-021-88226-3
+
+
