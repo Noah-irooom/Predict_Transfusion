@@ -11,11 +11,7 @@
 1. 데이터 : Medical Information Mart for Intensive Care III (MIMIC-III) 2001년부터 2012년까지 하버드 의대 교육 병원(Beth Israel Deaconess Medical Center)의 중환자실 입원 기록 데이터.
 2. 전체 순서도
 
-![Untitled](Red%20Blood%20Cell%20Transfusion%20Prediction%20in%20ICU%20acb773941a9c45888b306ca654a2ff90/Untitled.png)
-
-// 마트다운 형식
-![캡처](./MIMIC3_map.png)
- 
+![Flow Chart](./flow_chart.png)
 // 태그 형식
 <img src="/uploads/1848994ad25765da30fa8ef3684c67bc/캡처.PNG"  width="700" height="370">
 
@@ -25,9 +21,9 @@
 
 # III. Results
 
-[The model performances](https://www.notion.so/c9465517529645c986ef358fa27464f0)
+[The model performances]()
 
-![Untitled](Red%20Blood%20Cell%20Transfusion%20Prediction%20in%20ICU%20acb773941a9c45888b306ca654a2ff90/Untitled%201.png)
+![Feature Importances](./feature_importances.png)
 
 LGBM Feature importance
 
