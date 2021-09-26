@@ -13,6 +13,14 @@
 
 ![Untitled](Red%20Blood%20Cell%20Transfusion%20Prediction%20in%20ICU%20acb773941a9c45888b306ca654a2ff90/Untitled.png)
 
+// 마트다운 형식
+![캡처](./캡처.PNG)
+ 
+// 태그 형식
+<img src="/uploads/1848994ad25765da30fa8ef3684c67bc/캡처.PNG"  width="700" height="370">
+
+
+출처: https://cutemoomin.tistory.com/entry/Readme-파일에-이미지-넣기-마크다운-이미지 [무민은귀여워]
 환자를 주요 진단 그룹으로 선별하고, 입력속성은 인구통계정보, 실험실 및 임상 검사 값을 활용함.
 
 # III. Results
