@@ -9,22 +9,18 @@
 # II. Methods
 
 1. 데이터 : Medical Information Mart for Intensive Care III (MIMIC-III) 2001년부터 2012년까지 하버드 의대 교육 병원(Beth Israel Deaconess Medical Center)의 중환자실 입원 기록 데이터.
-2. 전체 순서도
-
-![Flow Chart](./flow_chart.png)
-// 태그 형식
-<img src="/uploads/1848994ad25765da30fa8ef3684c67bc/캡처.PNG"  width="700" height="370">
-
-
-출처: https://cutemoomin.tistory.com/entry/Readme-파일에-이미지-넣기-마크다운-이미지 [무민은귀여워]
+2. 대상 환자군 선별
+<img src="./patients.PNG"  width="700" height="370">
+3. 전체 순서도
+<img src="./flow_chart.PNG"  width="700" height="370">
 환자를 주요 진단 그룹으로 선별하고, 입력속성은 인구통계정보, 실험실 및 임상 검사 값을 활용함.
 
 # III. Results
 
-[The model performances]()
 
-![Feature Importances](./feature_importances.png)
+<img src="./performance.PNG"  width="700" height="370">
 
+<img src="./feature_importances.PNG"  width="700" height="370">
 LGBM Feature importance
 
 # IV. Discussion
