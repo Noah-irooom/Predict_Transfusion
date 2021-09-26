@@ -8,20 +8,33 @@
 
 # II. Methods
 
-1. 데이터 : Medical Information Mart for Intensive Care III (MIMIC-III) 2001년부터 2012년까지 하버드 의대 교육 병원(Beth Israel Deaconess Medical Center)의 중환자실 입원 기록 데이터.
-2. 대상 환자군 선별
-<img src="./patients.PNG"  width="700" height="370">
-3. 전체 순서도
-<img src="./flow_chart.PNG"  width="700" height="370">
-환자를 주요 진단 그룹으로 선별하고, 입력속성은 인구통계정보, 실험실 및 임상 검사 값을 활용함.
+## 1. 데이터 
+- Medical Information Mart for Intensive Care III (MIMIC-III) 2001년부터 2012년까지 하버드 의대 교육 병원(Beth Israel Deaconess Medical Center)의 중환자실 입원 기록 데이터.
+## 2. 대상 환자군 선별
+전체 환자 중, 처음 중환자실 입원 기록만을 사용하고, 주요 진단 그룹으로 나눔.
 
+<img src="./patients.PNG"  width="300" >
+
+## 3. 전체 순서도
+- 주요 진단 그룹으로 선별된 환제에서 입력속성을 추출함.
+- 인구통계정보, 실험실 및 임상 검사 값을 활용하여 농축 적혈구 수혈을 예측
+
+<img src="./flow_chart.PNG"  width="500" >
+
+## 4. 데이터 전처리
+- 결손값 처리 : 보간법, 평균, 포워드 필 등 시도.
+- 이동평균법 활용 : 각 4시간 구간마다 수행
 # III. Results
 
+## 1. 모델 성능 
+- 각 머신러닝 모델의 성능은 아래 표와 같다.(XGBoost, LightGBM, RandomForest, LSTM)
 
-<img src="./performance.PNG"  width="700" height="370">
+<img src="./performance.PNG"  width="500" >
 
-<img src="./feature_importances.PNG"  width="700" height="370">
-LGBM Feature importance
+## 2. LGBM Feature importance
+- 수혈의 적응증에서 가장 중요한 혈색소가 그림에서 가장 상위에 있는 것은 임상적의 의미와 잘 부합하고, 또한 크레아티닌도 중요한 예측인자가 될 수 있음을 지지한다.[3] 그 외, 혈압, 호흡수, 심박수 속성들 또한 중요한 생체 징후로 그 의미가 있다.
+<img src="./feature_importances.PNG"  width="600" >
+
 
 # IV. Discussion
 
@@ -32,3 +45,5 @@ LGBM Feature importance
 [1] 양진혁, et al. "수혈 적정성 평가지표 개발." 주간 건강과 질병 12.41 (2019): 1696-1702.
 
 [2] Yoon, Su Jin, et al. "Establishment of a Maximum Surgical Blood Order Schedule and Red Blood Cell Mean Transfusion Units Per Patient According to Adjacent Diagnosis Related Groups Patient Classification System." Laboratory Medicine Online 10.3: 235-241.
+
+[3] Tauber, Helmuth, et al. "Predicting transfusion requirements during extracorporeal membrane oxygenation." Journal of cardiothoracic and vascular anesthesia 30.3 (2016): 692-701.
