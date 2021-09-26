@@ -14,7 +14,7 @@
 ![Untitled](Red%20Blood%20Cell%20Transfusion%20Prediction%20in%20ICU%20acb773941a9c45888b306ca654a2ff90/Untitled.png)
 
 // 마트다운 형식
-![캡처](./캡처.PNG)
+![캡처](./MIMIC3_map.png)
  
 // 태그 형식
 <img src="/uploads/1848994ad25765da30fa8ef3684c67bc/캡처.PNG"  width="700" height="370">
