@@ -1,21 +1,34 @@
-# Predict Blood Transfusion using MIMIC-III data
+# Red Blood Cell Transfusion Prediction in ICU
 
-## 1. 연구 배경 및 소개 
-- 의학과 수업과정중 혈액종양내과 파트에서 공부한 내용을 토대로 수혈의 적정성에 대한 가이드라인이 완전하지 못하고 잘 지켜지지 않는 문제점을 발견.
-- 이를 토대로 건양대병원의 수혈 관련 데이터를 통해 머신러닝으로 수혈 가능성 예측이 가능한지 연구해보고자함.
-- 위 해당 연구의 파일럿으로 먼저 미국 중환자실 데이터(MIMIC)를 활용하여 중환자의 수혈 가능성을 머신러닝으로 예측하는 연구를 진행.
+# I. Background
 
-## 2. MIMIC-III 데이터 소개
-- 참고링크 : https://github.com/MIT-LCP/mimic-code
-- 미국 중환자실 데이터로서 Beth Israel Deaconess Medical Center 에 2001-2012동안 ICU입원한 환자를 대상으로함. 
-- 약 6만명 환자 데이터.
+혈액제제는 제조되는 것이 아닌 헌혈자로부터 얻어야만 한다. 즉 한정된 양의 혈액제제를 효율적이고, 효과적으로 필요한 환자에게 수혈하는 것이 필수적이다. 따라서 수혈의 경우 객관적 기준과 지표가 마련되어야 한다.[1] 그러나 기존 수혈의 기준 지표는 아직 많은 논의가 이루어지고 있고, 임상상태를 완벽히 고려한 기준을 도출하지는 못했다. 특히 내과적 질환에서의 수혈 기준 지표는 더욱 미비하다.[2] 
 
-## 3. 참고문헌
-- Shung, Dennis, et al. "Neural network predicts need for red blood cell transfusion for patients with acute gastrointestinal bleeding admitted to the intensive care unit." Scientific Reports 11.1 (2021): 1-12. (https://www.nature.com/articles/s41598-021-88226-3)
-- Levi, Riccardo, et al. "Artificial intelligence-based prediction of transfusion in the intensive care unit in patients with gastrointestinal bleeding." Bmj Health & Care Informatics 28.ARTICLE (2021): e100245. (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7813389/)
+본 연구는 수혈의 적정성을 인공지능으로 해결해보고자, 환자의 중환자실 입원 데이터를 활용하여, 주요 내과질환(Cadiology, Infection, Gastroenterology, Pulmonology)에서의 수혈 가능성 예측을 수행하였다.
 
-## 4. 데이터 전처리
+# II. Methods
 
+1. 데이터 : Medical Information Mart for Intensive Care III (MIMIC-III) 2001년부터 2012년까지 하버드 의대 교육 병원(Beth Israel Deaconess Medical Center)의 중환자실 입원 기록 데이터.
+2. 전체 순서도
 
-## 5. 모델링 디자인
+![Untitled](Red%20Blood%20Cell%20Transfusion%20Prediction%20in%20ICU%20acb773941a9c45888b306ca654a2ff90/Untitled.png)
 
+환자를 주요 진단 그룹으로 선별하고, 입력속성은 인구통계정보, 실험실 및 임상 검사 값을 활용함.
+
+# III. Results
+
+[The model performances](https://www.notion.so/c9465517529645c986ef358fa27464f0)
+
+![Untitled](Red%20Blood%20Cell%20Transfusion%20Prediction%20in%20ICU%20acb773941a9c45888b306ca654a2ff90/Untitled%201.png)
+
+LGBM Feature importance
+
+# IV. Discussion
+
+기존 선행 연구는 특정 질환이나 혹은 특정 수술에서의 수혈을 예측하는 경우가 많았다. 하지만 본 연구에서는 질환군을 확장하여 보편성을 넓히고자 하였고, 더하여 수술이 아닌 중환자 입원시 발생하는 수혈에 대해 예측을 수행하였다.
+
+# V. References
+
+[1] 양진혁, et al. "수혈 적정성 평가지표 개발." 주간 건강과 질병 12.41 (2019): 1696-1702.
+
+[2] Yoon, Su Jin, et al. "Establishment of a Maximum Surgical Blood Order Schedule and Red Blood Cell Mean Transfusion Units Per Patient According to Adjacent Diagnosis Related Groups Patient Classification System." Laboratory Medicine Online 10.3: 235-241.
